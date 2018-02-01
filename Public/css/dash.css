@@ -1,0 +1,155 @@
+/*
+ * Global add-ons
+ */
+
+.sub-header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Hide for mobile, show later */
+.sidebar {
+  display: none;
+}
+@media (min-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 30px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+  }
+}
+
+/*
+ * Top navigation
+ * Hide default border to remove 1px line.
+ */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 30px;
+    left:0;
+    background-color:#5d5c4d;
+    overflow-x: hidden;
+    transition: 0.4s;
+    padding-top: 60px;
+    margin-left:20px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 17px;
+    color: #fdcf09;
+    display: block;
+    transition: 0.2s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#contenido {
+    transition: margin-left .4s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.placeholders {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.placeholders h4 {
+  margin-bottom: 0;
+}
+.placeholder {
+  margin-bottom: 20px;
+}
+.placeholder img {
+  display: inline-block;
+  border-radius: 50%;
+}
+#header
+{
+  background-color:#6b6bec;
+  height:30px;
+  margin-bottom:3px; 
+}
+p
+{
+  text-align:center;
+  font-size:20px;
+  color:white; 
+}
+.glyphicon
+{
+
+  font-size:20px;
+}
+.cont {
+  bottom:5px;
+  position:relative;
+  display: block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.checkmark {
+  position:absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #fdcf09;
+}
+.cont input {
+  position:absolute;
+  opacity: 0;
+}
+.cont input:checked ~ .checkmark{
+  background-color:#55d23c;
+}
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.cont input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.cont .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.glyphicon-log-out{
+  float:right;
+  color:#fdcf09;
+  padding-right:20px;
+  font-size:27px
+}
